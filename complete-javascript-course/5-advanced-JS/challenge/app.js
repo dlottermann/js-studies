@@ -71,6 +71,7 @@
         }
     };
 
+    //Prototype with callback function closure example
     Question.prototype.checkAnswer = function (ans, callback) {
         var sc;
         if (ans === this.correctAnswer) {
@@ -111,6 +112,7 @@
     //Array of questions
     var questions = [q1, q2, q3];
 
+   //Closure example 
     function score() {
         var sc = 0;
         return function (correct) {
@@ -118,7 +120,7 @@
                 sc++;
             }
             return sc;
-        }
+        };
     }
 
     var keepScore = score();
